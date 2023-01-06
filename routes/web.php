@@ -13,7 +13,9 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', [UserController::class, 'LoginPage']);
+Route::get('/login', [UserController::class, 'loginPage']);
+Route::post('/login', [UserController::class, 'login']);
 Route::get('/singup', [UserController::class, 'SingupPage']);
+Route::post('/createUser', [UserController::class, 'store']);
+Route::get('/createUser/create', [UserController::class, 'create']);
 
